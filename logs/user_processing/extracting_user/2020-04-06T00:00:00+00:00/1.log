@@ -1,0 +1,25 @@
+[2021-07-17 13:57:03,527] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2020-04-06T00:00:00+00:00 [queued]>
+[2021-07-17 13:57:03,538] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2020-04-06T00:00:00+00:00 [queued]>
+[2021-07-17 13:57:03,538] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-17 13:57:03,538] {taskinstance.py:1088} INFO - Starting attempt 1 of 1
+[2021-07-17 13:57:03,538] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-17 13:57:03,564] {taskinstance.py:1107} INFO - Executing <Task(SimpleHttpOperator): extracting_user> on 2020-04-06T00:00:00+00:00
+[2021-07-17 13:57:03,570] {standard_task_runner.py:52} INFO - Started process 7912 to run task
+[2021-07-17 13:57:03,573] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'user_processing', 'extracting_user', '2020-04-06T00:00:00+00:00', '--job-id', '531', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmpah_6bhyw', '--error-file', '/tmp/tmp00l91o6u']
+[2021-07-17 13:57:03,573] {standard_task_runner.py:77} INFO - Job 531: Subtask extracting_user
+[2021-07-17 13:57:03,621] {logging_mixin.py:104} INFO - Running <TaskInstance: user_processing.extracting_user 2020-04-06T00:00:00+00:00 [running]> on host 120364900fc4
+[2021-07-17 13:57:03,699] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extracting_user
+AIRFLOW_CTX_EXECUTION_DATE=2020-04-06T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2020-04-06T00:00:00+00:00
+[2021-07-17 13:57:03,699] {http.py:111} INFO - Calling HTTP method
+[2021-07-17 13:57:03,709] {base.py:78} INFO - Using connection to: id: user_api. Host: https://randomuser.me/, Port: None, Schema: , Login: , Password: None, extra: {}
+[2021-07-17 13:57:03,710] {http.py:140} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2021-07-17 13:57:04,028] {http.py:115} INFO - {"results":[{"gender":"male","name":{"title":"Mr","first":"Natã","last":"Moreira"},"location":{"street":{"number":2566,"name":"Rua João Xxiii"},"city":"Barbacena","state":"São Paulo","country":"Brazil","postcode":62986,"coordinates":{"latitude":"-78.2940","longitude":"-72.0236"},"timezone":{"offset":"-5:00","description":"Eastern Time (US & Canada), Bogota, Lima"}},"email":"nata.moreira@example.com","login":{"uuid":"ba3461f9-190a-4c0b-9e20-e10374e01567","username":"blackbear895","password":"united","salt":"gLcOWcTg","md5":"cbf8ddd9e95e7612e3472185b2a3af39","sha1":"bffaeecae03c932511a26ff25a4bffd5965b99bf","sha256":"36812f36e24eafb73cbd332c4ecf0ed0dd1769503e55ac1b3889700301008362"},"dob":{"date":"1949-08-01T00:44:38.280Z","age":72},"registered":{"date":"2003-01-15T08:50:24.693Z","age":18},"phone":"(43) 9003-4423","cell":"(31) 9128-2528","id":{"name":"","value":null},"picture":{"large":"https://randomuser.me/api/portraits/men/23.jpg","medium":"https://randomuser.me/api/portraits/med/men/23.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/23.jpg"},"nat":"BR"}],"info":{"seed":"33c4e1d7f1539393","results":1,"page":1,"version":"1.3"}}
+[2021-07-17 13:57:04,073] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=user_processing, task_id=extracting_user, execution_date=20200406T000000, start_date=20210717T135703, end_date=20210717T135704
+[2021-07-17 13:57:04,137] {taskinstance.py:1265} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-07-17 13:57:04,157] {local_task_job.py:151} INFO - Task exited with return code 0

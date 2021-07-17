@@ -1,0 +1,25 @@
+[2021-07-17 13:58:37,189] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2020-05-29T00:00:00+00:00 [queued]>
+[2021-07-17 13:58:37,205] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2020-05-29T00:00:00+00:00 [queued]>
+[2021-07-17 13:58:37,207] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-17 13:58:37,207] {taskinstance.py:1088} INFO - Starting attempt 1 of 1
+[2021-07-17 13:58:37,207] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-17 13:58:37,227] {taskinstance.py:1107} INFO - Executing <Task(SimpleHttpOperator): extracting_user> on 2020-05-29T00:00:00+00:00
+[2021-07-17 13:58:37,233] {standard_task_runner.py:52} INFO - Started process 8694 to run task
+[2021-07-17 13:58:37,237] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'user_processing', 'extracting_user', '2020-05-29T00:00:00+00:00', '--job-id', '784', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmp99nkdike', '--error-file', '/tmp/tmpwhdksat3']
+[2021-07-17 13:58:37,237] {standard_task_runner.py:77} INFO - Job 784: Subtask extracting_user
+[2021-07-17 13:58:37,298] {logging_mixin.py:104} INFO - Running <TaskInstance: user_processing.extracting_user 2020-05-29T00:00:00+00:00 [running]> on host 120364900fc4
+[2021-07-17 13:58:37,452] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extracting_user
+AIRFLOW_CTX_EXECUTION_DATE=2020-05-29T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2020-05-29T00:00:00+00:00
+[2021-07-17 13:58:37,452] {http.py:111} INFO - Calling HTTP method
+[2021-07-17 13:58:37,492] {base.py:78} INFO - Using connection to: id: user_api. Host: https://randomuser.me/, Port: None, Schema: , Login: , Password: None, extra: {}
+[2021-07-17 13:58:37,498] {http.py:140} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2021-07-17 13:58:37,976] {http.py:115} INFO - {"results":[{"gender":"male","name":{"title":"Mr","first":"Hunter","last":"Peters"},"location":{"street":{"number":5962,"name":"E Center St"},"city":"Red Bluff","state":"Colorado","country":"United States","postcode":77786,"coordinates":{"latitude":"83.8500","longitude":"-51.7887"},"timezone":{"offset":"+11:00","description":"Magadan, Solomon Islands, New Caledonia"}},"email":"hunter.peters@example.com","login":{"uuid":"6bf92b1c-b389-4470-9fbc-2843da4b700c","username":"sadpeacock225","password":"valley","salt":"TnFKrBae","md5":"5737380cd5286113e7ca9ff9f01428b1","sha1":"eeb3854d46b710b1c37a53e3babe56742841d95f","sha256":"604a081f491973e824d48eec6e8336e58c4f828ea78a183ad6921f43b6c991d1"},"dob":{"date":"1972-05-16T09:23:55.808Z","age":49},"registered":{"date":"2006-08-20T07:42:19.165Z","age":15},"phone":"(862)-740-0723","cell":"(469)-708-9898","id":{"name":"SSN","value":"202-55-7426"},"picture":{"large":"https://randomuser.me/api/portraits/men/23.jpg","medium":"https://randomuser.me/api/portraits/med/men/23.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/23.jpg"},"nat":"US"}],"info":{"seed":"507dc6d20b03d8b7","results":1,"page":1,"version":"1.3"}}
+[2021-07-17 13:58:38,016] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=user_processing, task_id=extracting_user, execution_date=20200529T000000, start_date=20210717T135837, end_date=20210717T135838
+[2021-07-17 13:58:38,070] {taskinstance.py:1265} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-07-17 13:58:38,112] {local_task_job.py:151} INFO - Task exited with return code 0

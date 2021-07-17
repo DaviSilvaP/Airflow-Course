@@ -1,0 +1,25 @@
+[2021-07-17 13:56:40,389] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2020-04-05T00:00:00+00:00 [queued]>
+[2021-07-17 13:56:40,400] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2020-04-05T00:00:00+00:00 [queued]>
+[2021-07-17 13:56:40,400] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-17 13:56:40,400] {taskinstance.py:1088} INFO - Starting attempt 1 of 1
+[2021-07-17 13:56:40,401] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-17 13:56:40,430] {taskinstance.py:1107} INFO - Executing <Task(SimpleHttpOperator): extracting_user> on 2020-04-05T00:00:00+00:00
+[2021-07-17 13:56:40,438] {standard_task_runner.py:52} INFO - Started process 7796 to run task
+[2021-07-17 13:56:40,443] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'user_processing', 'extracting_user', '2020-04-05T00:00:00+00:00', '--job-id', '506', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmp_9m02wk0', '--error-file', '/tmp/tmp37y_1t_z']
+[2021-07-17 13:56:40,444] {standard_task_runner.py:77} INFO - Job 506: Subtask extracting_user
+[2021-07-17 13:56:40,488] {logging_mixin.py:104} INFO - Running <TaskInstance: user_processing.extracting_user 2020-04-05T00:00:00+00:00 [running]> on host 120364900fc4
+[2021-07-17 13:56:40,543] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extracting_user
+AIRFLOW_CTX_EXECUTION_DATE=2020-04-05T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2020-04-05T00:00:00+00:00
+[2021-07-17 13:56:40,544] {http.py:111} INFO - Calling HTTP method
+[2021-07-17 13:56:40,551] {base.py:78} INFO - Using connection to: id: user_api. Host: https://randomuser.me/, Port: None, Schema: , Login: , Password: None, extra: {}
+[2021-07-17 13:56:40,552] {http.py:140} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2021-07-17 13:56:40,934] {http.py:115} INFO - {"results":[{"gender":"female","name":{"title":"Miss","first":"مهدیس","last":"کریمی"},"location":{"street":{"number":5778,"name":"مصطفی خمینی"},"city":"خوی","state":"کهگیلویه و بویراحمد","country":"Iran","postcode":54845,"coordinates":{"latitude":"30.9446","longitude":"27.1074"},"timezone":{"offset":"+11:00","description":"Magadan, Solomon Islands, New Caledonia"}},"email":"mhdys.khrymy@example.com","login":{"uuid":"bd4f996e-73fb-4c9c-be3c-1c3e672ccaf1","username":"silverbutterfly796","password":"charlene","salt":"o0TYMUE3","md5":"c1a463fb6c574e5cbdda44653fc7181b","sha1":"b216109f53a68e712e93853c609f9283a9e9d20a","sha256":"46ac24fd1eb792178f28235efce36b334223b488e8aee5eb0e0a2ff98ab6ec97"},"dob":{"date":"1955-11-07T01:23:28.425Z","age":66},"registered":{"date":"2018-05-07T04:16:27.516Z","age":3},"phone":"041-77690150","cell":"0926-560-1334","id":{"name":"","value":null},"picture":{"large":"https://randomuser.me/api/portraits/women/40.jpg","medium":"https://randomuser.me/api/portraits/med/women/40.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/40.jpg"},"nat":"IR"}],"info":{"seed":"bed195916437ce86","results":1,"page":1,"version":"1.3"}}
+[2021-07-17 13:56:40,954] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=user_processing, task_id=extracting_user, execution_date=20200405T000000, start_date=20210717T135640, end_date=20210717T135640
+[2021-07-17 13:56:40,974] {taskinstance.py:1265} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-07-17 13:56:40,984] {local_task_job.py:151} INFO - Task exited with return code 0

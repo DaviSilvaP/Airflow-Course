@@ -1,0 +1,25 @@
+[2021-07-17 13:58:37,204] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2020-05-30T00:00:00+00:00 [queued]>
+[2021-07-17 13:58:37,238] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2020-05-30T00:00:00+00:00 [queued]>
+[2021-07-17 13:58:37,242] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-17 13:58:37,242] {taskinstance.py:1088} INFO - Starting attempt 1 of 1
+[2021-07-17 13:58:37,242] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-17 13:58:37,296] {taskinstance.py:1107} INFO - Executing <Task(SimpleHttpOperator): extracting_user> on 2020-05-30T00:00:00+00:00
+[2021-07-17 13:58:37,303] {standard_task_runner.py:52} INFO - Started process 8704 to run task
+[2021-07-17 13:58:37,312] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'user_processing', 'extracting_user', '2020-05-30T00:00:00+00:00', '--job-id', '785', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmpqnjmndlj', '--error-file', '/tmp/tmpl22jo2sd']
+[2021-07-17 13:58:37,312] {standard_task_runner.py:77} INFO - Job 785: Subtask extracting_user
+[2021-07-17 13:58:37,456] {logging_mixin.py:104} INFO - Running <TaskInstance: user_processing.extracting_user 2020-05-30T00:00:00+00:00 [running]> on host 120364900fc4
+[2021-07-17 13:58:37,633] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extracting_user
+AIRFLOW_CTX_EXECUTION_DATE=2020-05-30T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2020-05-30T00:00:00+00:00
+[2021-07-17 13:58:37,634] {http.py:111} INFO - Calling HTTP method
+[2021-07-17 13:58:37,643] {base.py:78} INFO - Using connection to: id: user_api. Host: https://randomuser.me/, Port: None, Schema: , Login: , Password: None, extra: {}
+[2021-07-17 13:58:37,647] {http.py:140} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2021-07-17 13:58:38,071] {http.py:115} INFO - {"results":[{"gender":"female","name":{"title":"Mrs","first":"Willow","last":"Singh"},"location":{"street":{"number":583,"name":"Prince Albert Road"},"city":"Gisborne","state":"Canterbury","country":"New Zealand","postcode":15109,"coordinates":{"latitude":"58.9923","longitude":"99.9289"},"timezone":{"offset":"-9:00","description":"Alaska"}},"email":"willow.singh@example.com","login":{"uuid":"fa920b32-03b1-414f-9756-4ffac6dbfff8","username":"happyfish949","password":"fright","salt":"oSggr0uD","md5":"00f816c0daeca24d774d28d74e9dfb6f","sha1":"7e0c269388ff497c1ddb2fff8667bc775a4ef212","sha256":"588d7146ef16f95ac4d0d2bedc36a77b1e9a93cac403d0e44390f8b2c1962790"},"dob":{"date":"1997-09-07T16:50:39.937Z","age":24},"registered":{"date":"2013-09-13T21:59:56.783Z","age":8},"phone":"(487)-999-5985","cell":"(782)-186-5431","id":{"name":"","value":null},"picture":{"large":"https://randomuser.me/api/portraits/women/77.jpg","medium":"https://randomuser.me/api/portraits/med/women/77.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/77.jpg"},"nat":"NZ"}],"info":{"seed":"0630dc1370f31c83","results":1,"page":1,"version":"1.3"}}
+[2021-07-17 13:58:38,128] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=user_processing, task_id=extracting_user, execution_date=20200530T000000, start_date=20210717T135837, end_date=20210717T135838
+[2021-07-17 13:58:38,173] {taskinstance.py:1265} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-07-17 13:58:38,229] {local_task_job.py:151} INFO - Task exited with return code 0

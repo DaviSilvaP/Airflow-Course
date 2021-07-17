@@ -1,0 +1,25 @@
+[2021-07-15 21:42:36,539] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2020-02-01T00:00:00+00:00 [queued]>
+[2021-07-15 21:42:36,557] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2020-02-01T00:00:00+00:00 [queued]>
+[2021-07-15 21:42:36,557] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-15 21:42:36,558] {taskinstance.py:1088} INFO - Starting attempt 1 of 1
+[2021-07-15 21:42:36,558] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-15 21:42:36,565] {taskinstance.py:1107} INFO - Executing <Task(SimpleHttpOperator): extracting_user> on 2020-02-01T00:00:00+00:00
+[2021-07-15 21:42:36,569] {standard_task_runner.py:52} INFO - Started process 5623 to run task
+[2021-07-15 21:42:36,572] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'user_processing', 'extracting_user', '2020-02-01T00:00:00+00:00', '--job-id', '174', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmpx2mfse0g', '--error-file', '/tmp/tmpbapvvqym']
+[2021-07-15 21:42:36,572] {standard_task_runner.py:77} INFO - Job 174: Subtask extracting_user
+[2021-07-15 21:42:36,635] {logging_mixin.py:104} INFO - Running <TaskInstance: user_processing.extracting_user 2020-02-01T00:00:00+00:00 [running]> on host 120364900fc4
+[2021-07-15 21:42:36,715] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extracting_user
+AIRFLOW_CTX_EXECUTION_DATE=2020-02-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2020-02-01T00:00:00+00:00
+[2021-07-15 21:42:36,717] {http.py:111} INFO - Calling HTTP method
+[2021-07-15 21:42:36,725] {base.py:78} INFO - Using connection to: id: user_api. Host: https://randomuser.me/, Port: None, Schema: , Login: , Password: None, extra: {}
+[2021-07-15 21:42:36,727] {http.py:140} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2021-07-15 21:42:37,023] {http.py:115} INFO - {"results":[{"gender":"female","name":{"title":"Ms","first":"Dawn","last":"Cooper"},"location":{"street":{"number":6014,"name":"Wycliff Ave"},"city":"Shelby","state":"Wisconsin","country":"United States","postcode":99735,"coordinates":{"latitude":"80.2831","longitude":"78.8716"},"timezone":{"offset":"+3:00","description":"Baghdad, Riyadh, Moscow, St. Petersburg"}},"email":"dawn.cooper@example.com","login":{"uuid":"32e89fdf-f637-425a-92f5-e55f0431f792","username":"goldenswan383","password":"walker","salt":"xmBltOYk","md5":"df06f5ab587db7792a0ff7423a49d7e1","sha1":"35de22c407c8c1b02e656545d466f6d2c3b07e03","sha256":"446a621bfeb072c0348dfdf2b9f3afb2e3d415877cfbb059411fadfa635072b0"},"dob":{"date":"1963-01-30T06:42:06.176Z","age":58},"registered":{"date":"2018-09-23T15:14:21.115Z","age":3},"phone":"(221)-945-1200","cell":"(179)-163-9999","id":{"name":"SSN","value":"650-27-2127"},"picture":{"large":"https://randomuser.me/api/portraits/women/1.jpg","medium":"https://randomuser.me/api/portraits/med/women/1.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/1.jpg"},"nat":"US"}],"info":{"seed":"c8e425c0a6eac9c8","results":1,"page":1,"version":"1.3"}}
+[2021-07-15 21:42:37,076] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=user_processing, task_id=extracting_user, execution_date=20200201T000000, start_date=20210715T214236, end_date=20210715T214237
+[2021-07-15 21:42:37,127] {taskinstance.py:1265} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-07-15 21:42:37,159] {local_task_job.py:151} INFO - Task exited with return code 0

@@ -1,0 +1,25 @@
+[2021-07-15 21:43:02,860] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2020-02-09T00:00:00+00:00 [queued]>
+[2021-07-15 21:43:02,895] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2020-02-09T00:00:00+00:00 [queued]>
+[2021-07-15 21:43:02,895] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-15 21:43:02,895] {taskinstance.py:1088} INFO - Starting attempt 1 of 1
+[2021-07-15 21:43:02,895] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-15 21:43:02,920] {taskinstance.py:1107} INFO - Executing <Task(SimpleHttpOperator): extracting_user> on 2020-02-09T00:00:00+00:00
+[2021-07-15 21:43:02,927] {standard_task_runner.py:52} INFO - Started process 5791 to run task
+[2021-07-15 21:43:02,931] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'user_processing', 'extracting_user', '2020-02-09T00:00:00+00:00', '--job-id', '225', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmpzbbxtnfd', '--error-file', '/tmp/tmpk4hu7cen']
+[2021-07-15 21:43:02,933] {standard_task_runner.py:77} INFO - Job 225: Subtask extracting_user
+[2021-07-15 21:43:03,010] {logging_mixin.py:104} INFO - Running <TaskInstance: user_processing.extracting_user 2020-02-09T00:00:00+00:00 [running]> on host 120364900fc4
+[2021-07-15 21:43:03,132] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extracting_user
+AIRFLOW_CTX_EXECUTION_DATE=2020-02-09T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2020-02-09T00:00:00+00:00
+[2021-07-15 21:43:03,133] {http.py:111} INFO - Calling HTTP method
+[2021-07-15 21:43:03,153] {base.py:78} INFO - Using connection to: id: user_api. Host: https://randomuser.me/, Port: None, Schema: , Login: , Password: None, extra: {}
+[2021-07-15 21:43:03,156] {http.py:140} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2021-07-15 21:43:03,468] {http.py:115} INFO - {"results":[{"gender":"female","name":{"title":"Ms","first":"Pinja","last":"Niemela"},"location":{"street":{"number":9388,"name":"Nordenskiöldinkatu"},"city":"Nastola","state":"Päijät-Häme","country":"Finland","postcode":25747,"coordinates":{"latitude":"-11.7552","longitude":"103.1688"},"timezone":{"offset":"+3:30","description":"Tehran"}},"email":"pinja.niemela@example.com","login":{"uuid":"c9c9f789-2158-48ca-a00d-e29700e31539","username":"ticklishtiger258","password":"1023","salt":"htGHVNNa","md5":"78c327f207cef3c2fae2b5e8a2116248","sha1":"3ee0e6971fe8a9febc66cc9d5dd41debe7377e08","sha256":"80aa5c22833127af662eef4d499a2f8c7bbdc14f7a4df851d193035d0e4a7a9e"},"dob":{"date":"1975-05-02T00:17:01.829Z","age":46},"registered":{"date":"2010-12-08T07:24:36.898Z","age":11},"phone":"02-920-316","cell":"040-007-35-66","id":{"name":"HETU","value":"NaNNA176undefined"},"picture":{"large":"https://randomuser.me/api/portraits/women/4.jpg","medium":"https://randomuser.me/api/portraits/med/women/4.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/4.jpg"},"nat":"FI"}],"info":{"seed":"257ae9f5ad704cfb","results":1,"page":1,"version":"1.3"}}
+[2021-07-15 21:43:03,499] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=user_processing, task_id=extracting_user, execution_date=20200209T000000, start_date=20210715T214302, end_date=20210715T214303
+[2021-07-15 21:43:03,556] {taskinstance.py:1265} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-07-15 21:43:03,570] {local_task_job.py:151} INFO - Task exited with return code 0

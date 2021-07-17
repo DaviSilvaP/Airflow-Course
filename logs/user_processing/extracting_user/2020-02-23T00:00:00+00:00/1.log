@@ -1,0 +1,25 @@
+[2021-07-15 21:43:34,045] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2020-02-23T00:00:00+00:00 [queued]>
+[2021-07-15 21:43:34,095] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2020-02-23T00:00:00+00:00 [queued]>
+[2021-07-15 21:43:34,095] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-15 21:43:34,095] {taskinstance.py:1088} INFO - Starting attempt 1 of 1
+[2021-07-15 21:43:34,095] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-15 21:43:34,114] {taskinstance.py:1107} INFO - Executing <Task(SimpleHttpOperator): extracting_user> on 2020-02-23T00:00:00+00:00
+[2021-07-15 21:43:34,120] {standard_task_runner.py:52} INFO - Started process 6038 to run task
+[2021-07-15 21:43:34,141] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'user_processing', 'extracting_user', '2020-02-23T00:00:00+00:00', '--job-id', '301', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmpax2zknz1', '--error-file', '/tmp/tmpc_u9l_jm']
+[2021-07-15 21:43:34,141] {standard_task_runner.py:77} INFO - Job 301: Subtask extracting_user
+[2021-07-15 21:43:34,261] {logging_mixin.py:104} INFO - Running <TaskInstance: user_processing.extracting_user 2020-02-23T00:00:00+00:00 [running]> on host 120364900fc4
+[2021-07-15 21:43:34,374] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extracting_user
+AIRFLOW_CTX_EXECUTION_DATE=2020-02-23T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2020-02-23T00:00:00+00:00
+[2021-07-15 21:43:34,375] {http.py:111} INFO - Calling HTTP method
+[2021-07-15 21:43:34,408] {base.py:78} INFO - Using connection to: id: user_api. Host: https://randomuser.me/, Port: None, Schema: , Login: , Password: None, extra: {}
+[2021-07-15 21:43:34,410] {http.py:140} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2021-07-15 21:43:34,918] {http.py:115} INFO - {"results":[{"gender":"female","name":{"title":"Ms","first":"Elif","last":"Berge"},"location":{"street":{"number":4292,"name":"Dybwads gate"},"city":"Bjertnestunet","state":"Sogn og Fjordane","country":"Norway","postcode":"1893","coordinates":{"latitude":"56.6128","longitude":"171.4974"},"timezone":{"offset":"+4:00","description":"Abu Dhabi, Muscat, Baku, Tbilisi"}},"email":"elif.berge@example.com","login":{"uuid":"30ca620b-7d35-4d11-839f-160c3ace0a49","username":"yellowbutterfly464","password":"mann","salt":"2mvYhhdl","md5":"ad67d6925f4f7992755fda6113cbcd5f","sha1":"e5553877c29162e586f9db32dcf171597ee373e9","sha256":"c0dfac521cb11cca39a508b91997594b116df586a39ab96b01b6de7fb21382a3"},"dob":{"date":"1946-03-23T17:10:35.116Z","age":75},"registered":{"date":"2015-12-30T08:06:01.213Z","age":6},"phone":"67806264","cell":"90263684","id":{"name":"FN","value":"23034640866"},"picture":{"large":"https://randomuser.me/api/portraits/women/24.jpg","medium":"https://randomuser.me/api/portraits/med/women/24.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/24.jpg"},"nat":"NO"}],"info":{"seed":"ba2f8660c90a38ce","results":1,"page":1,"version":"1.3"}}
+[2021-07-15 21:43:34,993] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=user_processing, task_id=extracting_user, execution_date=20200223T000000, start_date=20210715T214334, end_date=20210715T214334
+[2021-07-15 21:43:35,058] {taskinstance.py:1265} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-07-15 21:43:35,069] {local_task_job.py:151} INFO - Task exited with return code 0

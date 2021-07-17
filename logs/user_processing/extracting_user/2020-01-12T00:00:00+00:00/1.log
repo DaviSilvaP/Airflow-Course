@@ -1,0 +1,25 @@
+[2021-07-15 21:42:04,528] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2020-01-12T00:00:00+00:00 [queued]>
+[2021-07-15 21:42:04,561] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2020-01-12T00:00:00+00:00 [queued]>
+[2021-07-15 21:42:04,561] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-15 21:42:04,561] {taskinstance.py:1088} INFO - Starting attempt 1 of 1
+[2021-07-15 21:42:04,561] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-15 21:42:04,577] {taskinstance.py:1107} INFO - Executing <Task(SimpleHttpOperator): extracting_user> on 2020-01-12T00:00:00+00:00
+[2021-07-15 21:42:04,581] {standard_task_runner.py:52} INFO - Started process 5340 to run task
+[2021-07-15 21:42:04,587] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'user_processing', 'extracting_user', '2020-01-12T00:00:00+00:00', '--job-id', '83', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmpqh2glonh', '--error-file', '/tmp/tmpcz3khoww']
+[2021-07-15 21:42:04,587] {standard_task_runner.py:77} INFO - Job 83: Subtask extracting_user
+[2021-07-15 21:42:04,689] {logging_mixin.py:104} INFO - Running <TaskInstance: user_processing.extracting_user 2020-01-12T00:00:00+00:00 [running]> on host 120364900fc4
+[2021-07-15 21:42:04,832] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extracting_user
+AIRFLOW_CTX_EXECUTION_DATE=2020-01-12T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2020-01-12T00:00:00+00:00
+[2021-07-15 21:42:04,834] {http.py:111} INFO - Calling HTTP method
+[2021-07-15 21:42:04,848] {base.py:78} INFO - Using connection to: id: user_api. Host: https://randomuser.me/, Port: None, Schema: , Login: , Password: None, extra: {}
+[2021-07-15 21:42:04,850] {http.py:140} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2021-07-15 21:42:05,192] {http.py:115} INFO - {"results":[{"gender":"male","name":{"title":"Monsieur","first":"Theo","last":"Bertrand"},"location":{"street":{"number":7790,"name":"Avenue de la Libération"},"city":"Walzenhausen","state":"Aargau","country":"Switzerland","postcode":3406,"coordinates":{"latitude":"-50.6058","longitude":"-101.5905"},"timezone":{"offset":"-7:00","description":"Mountain Time (US & Canada)"}},"email":"theo.bertrand@example.com","login":{"uuid":"e02c0f00-9ae9-41d7-9b7e-d64b4d668aa8","username":"lazytiger851","password":"qwerasdf","salt":"LO4MgYB1","md5":"528202399b32f4b3f7c6f967757aaef8","sha1":"628355a5f428fa2405c1ef06d7740544ae89f7d6","sha256":"1cf0ba46b5335347f9b1278ac70379a86a5dab7225e689c9ab8a2772ea780d15"},"dob":{"date":"1967-04-24T13:56:52.669Z","age":54},"registered":{"date":"2006-10-21T08:05:18.225Z","age":15},"phone":"079 345 66 56","cell":"075 278 74 82","id":{"name":"AVS","value":"756.5042.8923.07"},"picture":{"large":"https://randomuser.me/api/portraits/men/73.jpg","medium":"https://randomuser.me/api/portraits/med/men/73.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/73.jpg"},"nat":"CH"}],"info":{"seed":"e0aeb54288d60cd4","results":1,"page":1,"version":"1.3"}}
+[2021-07-15 21:42:05,243] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=user_processing, task_id=extracting_user, execution_date=20200112T000000, start_date=20210715T214204, end_date=20210715T214205
+[2021-07-15 21:42:05,283] {taskinstance.py:1265} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-07-15 21:42:05,308] {local_task_job.py:151} INFO - Task exited with return code 0

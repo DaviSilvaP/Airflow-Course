@@ -1,0 +1,25 @@
+[2021-07-17 13:57:35,449] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2020-04-26T00:00:00+00:00 [queued]>
+[2021-07-17 13:57:35,464] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2020-04-26T00:00:00+00:00 [queued]>
+[2021-07-17 13:57:35,466] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-17 13:57:35,466] {taskinstance.py:1088} INFO - Starting attempt 1 of 1
+[2021-07-17 13:57:35,466] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-17 13:57:35,486] {taskinstance.py:1107} INFO - Executing <Task(SimpleHttpOperator): extracting_user> on 2020-04-26T00:00:00+00:00
+[2021-07-17 13:57:35,492] {standard_task_runner.py:52} INFO - Started process 8189 to run task
+[2021-07-17 13:57:35,514] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'user_processing', 'extracting_user', '2020-04-26T00:00:00+00:00', '--job-id', '622', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmpu0q0llgz', '--error-file', '/tmp/tmpvbqevewu']
+[2021-07-17 13:57:35,514] {standard_task_runner.py:77} INFO - Job 622: Subtask extracting_user
+[2021-07-17 13:57:35,574] {logging_mixin.py:104} INFO - Running <TaskInstance: user_processing.extracting_user 2020-04-26T00:00:00+00:00 [running]> on host 120364900fc4
+[2021-07-17 13:57:35,666] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extracting_user
+AIRFLOW_CTX_EXECUTION_DATE=2020-04-26T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2020-04-26T00:00:00+00:00
+[2021-07-17 13:57:35,666] {http.py:111} INFO - Calling HTTP method
+[2021-07-17 13:57:35,699] {base.py:78} INFO - Using connection to: id: user_api. Host: https://randomuser.me/, Port: None, Schema: , Login: , Password: None, extra: {}
+[2021-07-17 13:57:35,701] {http.py:140} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2021-07-17 13:57:36,190] {http.py:115} INFO - {"results":[{"gender":"male","name":{"title":"Mr","first":"Meine","last":"Moret"},"location":{"street":{"number":530,"name":"Korvetstraat"},"city":"Aalden","state":"Drenthe","country":"Netherlands","postcode":33555,"coordinates":{"latitude":"38.3504","longitude":"-50.5042"},"timezone":{"offset":"-12:00","description":"Eniwetok, Kwajalein"}},"email":"meine.moret@example.com","login":{"uuid":"9700f004-bf32-47b0-a4bf-6d272dad8241","username":"sadzebra492","password":"dominic","salt":"T7mjDTcP","md5":"512f8f1254db2c6f34a41dd5b406180b","sha1":"735b880df3937d615baf23c1027e1ca713d8c520","sha256":"a013e611134cb2a43377ea68460f457e43ec6736a8c648451723f9781aacb7b0"},"dob":{"date":"1990-11-08T04:16:29.996Z","age":31},"registered":{"date":"2004-07-19T06:07:52.450Z","age":17},"phone":"(186)-851-3085","cell":"(370)-407-7211","id":{"name":"BSN","value":"11157658"},"picture":{"large":"https://randomuser.me/api/portraits/men/46.jpg","medium":"https://randomuser.me/api/portraits/med/men/46.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/46.jpg"},"nat":"NL"}],"info":{"seed":"8cd7afb3d1a6a87e","results":1,"page":1,"version":"1.3"}}
+[2021-07-17 13:57:36,282] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=user_processing, task_id=extracting_user, execution_date=20200426T000000, start_date=20210717T135735, end_date=20210717T135736
+[2021-07-17 13:57:36,373] {taskinstance.py:1265} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-07-17 13:57:36,398] {local_task_job.py:151} INFO - Task exited with return code 0

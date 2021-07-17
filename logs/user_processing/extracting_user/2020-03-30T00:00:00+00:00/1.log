@@ -1,0 +1,25 @@
+[2021-07-17 13:56:36,646] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2020-03-30T00:00:00+00:00 [queued]>
+[2021-07-17 13:56:36,657] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2020-03-30T00:00:00+00:00 [queued]>
+[2021-07-17 13:56:36,659] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-17 13:56:36,659] {taskinstance.py:1088} INFO - Starting attempt 1 of 1
+[2021-07-17 13:56:36,660] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-17 13:56:36,672] {taskinstance.py:1107} INFO - Executing <Task(SimpleHttpOperator): extracting_user> on 2020-03-30T00:00:00+00:00
+[2021-07-17 13:56:36,679] {standard_task_runner.py:52} INFO - Started process 7713 to run task
+[2021-07-17 13:56:36,690] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'user_processing', 'extracting_user', '2020-03-30T00:00:00+00:00', '--job-id', '475', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmpgfbtcyy5', '--error-file', '/tmp/tmputetrurj']
+[2021-07-17 13:56:36,691] {standard_task_runner.py:77} INFO - Job 475: Subtask extracting_user
+[2021-07-17 13:56:36,821] {logging_mixin.py:104} INFO - Running <TaskInstance: user_processing.extracting_user 2020-03-30T00:00:00+00:00 [running]> on host 120364900fc4
+[2021-07-17 13:56:37,000] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extracting_user
+AIRFLOW_CTX_EXECUTION_DATE=2020-03-30T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2020-03-30T00:00:00+00:00
+[2021-07-17 13:56:37,000] {http.py:111} INFO - Calling HTTP method
+[2021-07-17 13:56:37,029] {base.py:78} INFO - Using connection to: id: user_api. Host: https://randomuser.me/, Port: None, Schema: , Login: , Password: None, extra: {}
+[2021-07-17 13:56:37,030] {http.py:140} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2021-07-17 13:56:37,366] {http.py:115} INFO - {"results":[{"gender":"female","name":{"title":"Miss","first":"Naomi","last":"Hughes"},"location":{"street":{"number":288,"name":"Karamu Road"},"city":"New Plymouth","state":"Tasman","country":"New Zealand","postcode":63502,"coordinates":{"latitude":"63.1243","longitude":"10.3770"},"timezone":{"offset":"+9:00","description":"Tokyo, Seoul, Osaka, Sapporo, Yakutsk"}},"email":"naomi.hughes@example.com","login":{"uuid":"b40e068c-9276-4df6-ac5b-b1c55f0354b7","username":"silverpanda197","password":"freeway","salt":"kCA10yAV","md5":"b259bd5e41cd55c337f5c0b778372d36","sha1":"400f5ef50c694f3d39f39ce6b8154b44f8f5d549","sha256":"e6db74113280d3eeba3d144a3d3f08743f1fa21797da1e0bf5deb7085a7b2da6"},"dob":{"date":"1985-04-29T07:20:02.596Z","age":36},"registered":{"date":"2008-06-13T07:16:01.760Z","age":13},"phone":"(902)-327-4642","cell":"(858)-776-2826","id":{"name":"","value":null},"picture":{"large":"https://randomuser.me/api/portraits/women/34.jpg","medium":"https://randomuser.me/api/portraits/med/women/34.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/34.jpg"},"nat":"NZ"}],"info":{"seed":"9ba400362d1e4083","results":1,"page":1,"version":"1.3"}}
+[2021-07-17 13:56:37,430] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=user_processing, task_id=extracting_user, execution_date=20200330T000000, start_date=20210717T135636, end_date=20210717T135637
+[2021-07-17 13:56:37,615] {taskinstance.py:1265} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-07-17 13:56:37,636] {local_task_job.py:151} INFO - Task exited with return code 0

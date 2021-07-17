@@ -1,0 +1,25 @@
+[2021-07-15 21:36:42,154] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2021-07-14T00:00:00+00:00 [queued]>
+[2021-07-15 21:36:42,164] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2021-07-14T00:00:00+00:00 [queued]>
+[2021-07-15 21:36:42,164] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-15 21:36:42,164] {taskinstance.py:1088} INFO - Starting attempt 1 of 1
+[2021-07-15 21:36:42,164] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-15 21:36:42,168] {taskinstance.py:1107} INFO - Executing <Task(SimpleHttpOperator): extracting_user> on 2021-07-14T00:00:00+00:00
+[2021-07-15 21:36:42,171] {standard_task_runner.py:52} INFO - Started process 4731 to run task
+[2021-07-15 21:36:42,173] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'user_processing', 'extracting_user', '2021-07-14T00:00:00+00:00', '--job-id', '26', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmpxt81azc4', '--error-file', '/tmp/tmp9olfsgcj']
+[2021-07-15 21:36:42,173] {standard_task_runner.py:77} INFO - Job 26: Subtask extracting_user
+[2021-07-15 21:36:42,197] {logging_mixin.py:104} INFO - Running <TaskInstance: user_processing.extracting_user 2021-07-14T00:00:00+00:00 [running]> on host 120364900fc4
+[2021-07-15 21:36:42,226] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extracting_user
+AIRFLOW_CTX_EXECUTION_DATE=2021-07-14T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-07-14T00:00:00+00:00
+[2021-07-15 21:36:42,227] {http.py:111} INFO - Calling HTTP method
+[2021-07-15 21:36:42,233] {base.py:78} INFO - Using connection to: id: user_api. Host: https://randomuser.me/, Port: None, Schema: , Login: , Password: None, extra: {}
+[2021-07-15 21:36:42,235] {http.py:140} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2021-07-15 21:36:42,540] {http.py:115} INFO - {"results":[{"gender":"female","name":{"title":"Mrs","first":"Elif","last":"Elmastaşoğlu"},"location":{"street":{"number":1636,"name":"Fatih Sultan Mehmet Cd"},"city":"Afyonkarahisar","state":"Aksaray","country":"Turkey","postcode":94547,"coordinates":{"latitude":"78.7563","longitude":"160.7604"},"timezone":{"offset":"-3:30","description":"Newfoundland"}},"email":"elif.elmastasoglu@example.com","login":{"uuid":"55742c0d-f839-4ab3-8ace-14081b2c2a16","username":"whitebutterfly338","password":"ryan","salt":"ImKPTmVO","md5":"3ee1926e8ee3b6c1dd6219a73265a9dd","sha1":"fd483ae6976891b25527189cdb2394e628a6ab61","sha256":"8f5a9ee2560ec1063640bf75bea76499ed60ac99f81f07f68ae4fbdc98425a19"},"dob":{"date":"1946-10-29T08:17:04.736Z","age":75},"registered":{"date":"2011-11-01T17:35:37.026Z","age":10},"phone":"(717)-160-4211","cell":"(663)-041-4488","id":{"name":"","value":null},"picture":{"large":"https://randomuser.me/api/portraits/women/11.jpg","medium":"https://randomuser.me/api/portraits/med/women/11.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/11.jpg"},"nat":"TR"}],"info":{"seed":"48402bdf7ef294c8","results":1,"page":1,"version":"1.3"}}
+[2021-07-15 21:36:42,599] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=user_processing, task_id=extracting_user, execution_date=20210714T000000, start_date=20210715T213642, end_date=20210715T213642
+[2021-07-15 21:36:42,618] {taskinstance.py:1265} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-07-15 21:36:42,625] {local_task_job.py:151} INFO - Task exited with return code 0

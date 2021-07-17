@@ -1,0 +1,25 @@
+[2021-07-17 13:56:34,157] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2020-03-24T00:00:00+00:00 [queued]>
+[2021-07-17 13:56:34,170] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2020-03-24T00:00:00+00:00 [queued]>
+[2021-07-17 13:56:34,170] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-17 13:56:34,170] {taskinstance.py:1088} INFO - Starting attempt 1 of 1
+[2021-07-17 13:56:34,170] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-07-17 13:56:34,188] {taskinstance.py:1107} INFO - Executing <Task(SimpleHttpOperator): extracting_user> on 2020-03-24T00:00:00+00:00
+[2021-07-17 13:56:34,192] {standard_task_runner.py:52} INFO - Started process 7672 to run task
+[2021-07-17 13:56:34,210] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'user_processing', 'extracting_user', '2020-03-24T00:00:00+00:00', '--job-id', '458', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmpb2bmo3x2', '--error-file', '/tmp/tmpkqkp6o1b']
+[2021-07-17 13:56:34,210] {standard_task_runner.py:77} INFO - Job 458: Subtask extracting_user
+[2021-07-17 13:56:34,258] {logging_mixin.py:104} INFO - Running <TaskInstance: user_processing.extracting_user 2020-03-24T00:00:00+00:00 [running]> on host 120364900fc4
+[2021-07-17 13:56:34,331] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extracting_user
+AIRFLOW_CTX_EXECUTION_DATE=2020-03-24T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2020-03-24T00:00:00+00:00
+[2021-07-17 13:56:34,335] {http.py:111} INFO - Calling HTTP method
+[2021-07-17 13:56:34,352] {base.py:78} INFO - Using connection to: id: user_api. Host: https://randomuser.me/, Port: None, Schema: , Login: , Password: None, extra: {}
+[2021-07-17 13:56:34,353] {http.py:140} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2021-07-17 13:56:34,740] {http.py:115} INFO - {"results":[{"gender":"female","name":{"title":"Ms","first":"Anita","last":"Hall"},"location":{"street":{"number":4943,"name":"Prospect Rd"},"city":"Scottsdale","state":"New Jersey","country":"United States","postcode":86491,"coordinates":{"latitude":"85.9145","longitude":"71.6364"},"timezone":{"offset":"-1:00","description":"Azores, Cape Verde Islands"}},"email":"anita.hall@example.com","login":{"uuid":"05d67ac9-d1be-47c9-82b8-21f9d6ae9933","username":"orangedog163","password":"redhead","salt":"gR6BWKak","md5":"0fc4f232ddbd58415fe3804ec88b573b","sha1":"464e66917ac713fa98b537e0d35bcbfdeed04276","sha256":"1d8087cc2b6d0cf5cf9c650876f786991fab60099a8c05249521655dcfd69a6d"},"dob":{"date":"1995-08-27T00:26:35.280Z","age":26},"registered":{"date":"2012-01-27T01:25:36.581Z","age":9},"phone":"(369)-652-2565","cell":"(810)-814-9293","id":{"name":"SSN","value":"474-91-5684"},"picture":{"large":"https://randomuser.me/api/portraits/women/84.jpg","medium":"https://randomuser.me/api/portraits/med/women/84.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/84.jpg"},"nat":"US"}],"info":{"seed":"4e38c5aa8137f01f","results":1,"page":1,"version":"1.3"}}
+[2021-07-17 13:56:34,787] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=user_processing, task_id=extracting_user, execution_date=20200324T000000, start_date=20210717T135634, end_date=20210717T135634
+[2021-07-17 13:56:34,829] {taskinstance.py:1265} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-07-17 13:56:34,858] {local_task_job.py:151} INFO - Task exited with return code 0
