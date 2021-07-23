@@ -63,16 +63,6 @@ with DAG('xcom_dag', schedule_interval='@daily',
             python_callable=_training_model
         )
 
-    """choose_model = PythonOperator(
-        task_id='task_4',
-        python_callable=_choose_best_model
-    )
-
-    is_accurate = BranchPythonOperator(
-        task_id='is_accurate',
-        python_callable=_is_accurate
-    )"""
-
     choose_model = BranchPythonOperator(
         task_id='choose_best_model',
         python_callable=_choose_best_model
@@ -87,7 +77,8 @@ with DAG('xcom_dag', schedule_interval='@daily',
     )
 
     storing = DummyOperator(
-        task_id='storing'
+        task_id='storing',
+        trigger_rule='none_failed_or_skipped'
     )
 
     downloading_data >> processing_tasks >> choose_model
